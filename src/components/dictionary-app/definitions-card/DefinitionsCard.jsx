@@ -1,10 +1,12 @@
-import Definition from "./Definition";
+import Definition from "../definition/Definition";
+import './DefinitionsCard.css';
 
 function DefinitionsCard({ result }) {
-  console.log(result)
+
   return (
-    <div>
+    <div id="definitions-card">
       <h2>{result.word}</h2>
+      <p>{result.phonetic}</p>
       {result.meanings?.map((value, index) => {
         return (
           <div key={index}>

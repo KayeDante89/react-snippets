@@ -1,5 +1,7 @@
 import { useState } from "react";
-import DefinitionsCard from "../components/dictionary-app/DefinitionsCard";
+import DefinitionsCard from "../../components/dictionary-app/definitions-card/DefinitionsCard";
+
+import './DictionaryApp.css';
 
 const BASE_URL = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
@@ -21,10 +23,14 @@ function DictionaryApp() {
 
       try {
         const response = await fetch(`${BASE_URL}${inputValue}`);
+        if (!response.ok) {
+          setError(err);
+        }
         const data = await response.json();
         setResult(data[0]);
-      } catch (error) {
-        setError(error);
+
+      } catch (err) {
+        setError(err);
       }
 
       setIsLoading(false);
@@ -33,12 +39,8 @@ function DictionaryApp() {
     fetchData();
   }
 
-  if (isLoading) {
-    return <div>Loading..</div>;
-  }
-
   if (error) {
-    return <div>Something went wrong. Try again.</div>;
+    return <div id="error-page">Sorry! The word you typed may not exist or there was an issue fetching the data. Please refresh and try again.</div>;
   }
 
   return (
@@ -52,7 +54,7 @@ function DictionaryApp() {
           placeholder="type a word .."
         />
       </form>
-      <DefinitionsCard result={result}/>
+      {isLoading ? <p>Loading..</p> : <DefinitionsCard result={result} />}
     </main>
   );
 }

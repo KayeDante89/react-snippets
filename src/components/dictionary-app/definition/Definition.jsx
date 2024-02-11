@@ -1,10 +1,12 @@
+import './Definition.css';
+
 function Definition({definition}) {
-  // console.log(definition)
+
   return (
-    definition.map((value, index) => {
+    definition.slice(0, 3).map((value, index) => {
       return (
         <div key={`definition-${index}`}>
-          <p>{value.definition}</p>
+          <p>{index + 1}. {value.definition}</p>
         </div>
       )
     })
