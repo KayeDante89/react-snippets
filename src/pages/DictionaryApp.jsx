@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import DefinitionsCard from "../components/dictionary-app/DefinitionsCard";
 
 const BASE_URL = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
 function DictionaryApp() {
-  const [results, setResults] = useState("");
+  const [result, setResult] = useState("");
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState();
@@ -16,20 +17,20 @@ function DictionaryApp() {
     e.preventDefault();
 
     const fetchData = async () => {
-          setIsLoading(true);
-    
-          try {
-            const response = await fetch(`${BASE_URL}${inputValue}`);
-            const data = await response.json();
-            setResults(data[0]);
-          } catch (error) {
-            setError(error);
-          }
-    
-          setIsLoading(false);
-        };
-    
-        fetchData();
+      setIsLoading(true);
+
+      try {
+        const response = await fetch(`${BASE_URL}${inputValue}`);
+        const data = await response.json();
+        setResult(data[0]);
+      } catch (error) {
+        setError(error);
+      }
+
+      setIsLoading(false);
+    };
+
+    fetchData();
   }
 
   if (isLoading) {
@@ -39,8 +40,6 @@ function DictionaryApp() {
   if (error) {
     return <div>Something went wrong. Try again.</div>;
   }
-
-  console.log(inputValue);
 
   return (
     <main id="dictionary-content">
@@ -52,8 +51,8 @@ function DictionaryApp() {
           autoFocus="on"
           placeholder="type a word .."
         />
-        <p>{results.word}</p>
       </form>
+      <DefinitionsCard result={result}/>
     </main>
   );
 }
