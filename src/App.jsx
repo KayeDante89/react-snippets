@@ -4,9 +4,9 @@ import DictionaryApp from './pages/dictionary-app/DictionaryApp'
 function App() {
 
   return (
-    <div>
+    <>
       <DictionaryApp/>
-    </div>
+    </>
   )
 }
 

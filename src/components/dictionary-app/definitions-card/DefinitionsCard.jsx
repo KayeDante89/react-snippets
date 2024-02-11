@@ -10,8 +10,8 @@ function DefinitionsCard({ result }) {
       {result.meanings?.map((value, index) => {
         return (
           <div key={index}>
-            <p>{value.partOfSpeech}</p>
-            <ol>
+            <p className="pos-text">{value.partOfSpeech}</p>
+            <ol className="definition-list">
               <Definition definition={value.definitions}/>
             </ol>
             

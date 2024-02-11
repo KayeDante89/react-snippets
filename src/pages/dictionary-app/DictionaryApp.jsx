@@ -40,28 +40,34 @@ function DictionaryApp() {
 
   if (error) {
     return (
-      <div id="error-page">
-        <div className="error-message">
-          Sorry! The word you typed may not exist or there was an issue fetching
-          the data. Please refresh and try again.
+      <div className="dictionary-app">
+        <div className="dict-container">
+          <h1>Oops!</h1>
+          <p>
+            The word you typed may not exist or there was an issue fetching the
+            data.
+          </p>
+          <p>Please refresh and try again.</p>
         </div>
       </div>
     );
   }
 
   return (
-    <main id="dictionary-content">
-      <h1>Dictionary App</h1>
-      <form onSubmit={search}>
-        <input
-          className="search-input"
-          type="search"
-          autoFocus="on"
-          placeholder="type a word .."
-          onChange={handleChange}
-        />
-      </form>
-      {isLoading ? <p>Loading..</p> : <DefinitionsCard result={result} />}
+    <main className="dictionary-app">
+      <div className="dict-container">
+        <h1>Dictionary App</h1>
+        <form onSubmit={search}>
+          <input
+            className="search-input"
+            type="search"
+            autoFocus="on"
+            placeholder="Lookup a word .."
+            onChange={handleChange}
+          />
+        </form>
+        {isLoading ? <p>Loading..</p> : <DefinitionsCard result={result} />}
+      </div>
     </main>
   );
 }

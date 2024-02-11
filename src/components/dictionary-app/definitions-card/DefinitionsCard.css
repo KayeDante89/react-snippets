@@ -1,0 +1,19 @@
+#definitions-card {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+#definitions-card h2 {
+  margin: 0;
+}
+
+.definition-list li {
+  font-size: 13.5px;
+  line-height: 2;
+}
+
+.pos-text {
+  padding: 8px 10px;
+  border-bottom: 0.5px solid black;
+  font-size: 14px;
+}
