@@ -11,7 +11,10 @@ function DefinitionsCard({ result }) {
         return (
           <div key={index}>
             <p>{value.partOfSpeech}</p>
-            <Definition definition={value.definitions}/>
+            <ol>
+              <Definition definition={value.definitions}/>
+            </ol>
+            
           </div>
         );
       })}
