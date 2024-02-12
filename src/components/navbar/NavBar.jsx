@@ -16,6 +16,9 @@ function NavBar() {
             <li>
               <Link to="/dictionary">Dictionary</Link>
             </li>
+            <li>
+              <Link to="/pokemon-search">Pokemon Search</Link>
+            </li>
           </ul>
         </li>
       </ul>

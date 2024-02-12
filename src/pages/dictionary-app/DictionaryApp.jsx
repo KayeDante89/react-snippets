@@ -1,8 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import DefinitionsCard from "../../components/dictionary-app/definitions-card/DefinitionsCard";
 
 import "./DictionaryApp.css";
-import React from "react";
 
 const BASE_URL = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
