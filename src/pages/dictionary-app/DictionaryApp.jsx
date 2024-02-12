@@ -24,10 +24,11 @@ function DictionaryApp() {
 
       try {
         const response = await fetch(`${BASE_URL}${inputValue}`);
-        
+
         if (!response.ok) {
-          return alert("Ooops! Does that word exist? Refresh and try again.")
+          return alert("Ooops! Does that word exist? Refresh and try again.");
         }
+
         const data = await response.json();
         setResult(data[0]);
       } catch (err) {
@@ -68,7 +69,7 @@ function DictionaryApp() {
             onChange={handleChange}
           />
         </form>
-        {isLoading ? <p>Loading..</p> : <DefinitionsCard result={result} />}
+        <DefinitionsCard result={result} isLoading={isLoading} />
       </div>
     </main>
   );
