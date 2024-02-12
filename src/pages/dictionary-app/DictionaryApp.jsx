@@ -39,6 +39,7 @@ function DictionaryApp() {
     };
 
     fetchData();
+    setInputValue("");
   }
 
   if (error) {
@@ -62,6 +63,7 @@ function DictionaryApp() {
         <h1>Dictionary App</h1>
         <form onSubmit={search}>
           <input
+            value={inputValue}
             className="search-input"
             type="search"
             autoFocus={true}
