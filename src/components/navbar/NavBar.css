@@ -1,0 +1,21 @@
+#side-nav {
+  height: 100vh; 
+  position: fixed;
+  width: 220px;
+  margin: 0px;
+  z-index: 1;
+  top: 0; 
+  left: 0;
+  background-color: #e7e7e7; 
+  overflow-x: hidden; 
+  padding-top: 30px;
+}
+
+#nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+#nav-links a:hover {
+  color: purple;
+}

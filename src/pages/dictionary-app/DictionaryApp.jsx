@@ -44,7 +44,7 @@ function DictionaryApp() {
 
   if (error) {
     return (
-      <div className="dictionary-app">
+      <div className="dictionary-app page-margin">
         <div className="dict-container">
           <h1>Oops!</h1>
           <p>
@@ -58,7 +58,7 @@ function DictionaryApp() {
   }
 
   return (
-    <main className="dictionary-app">
+    <main className="dictionary-app page-margin">
       <div className="dict-container">
         <h1>Dictionary App</h1>
         <form onSubmit={search}>
