@@ -2,6 +2,7 @@ import { useState } from "react";
 import DefinitionsCard from "../../components/dictionary-app/definitions-card/DefinitionsCard";
 
 import "./DictionaryApp.css";
+import React from "react";
 
 const BASE_URL = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
@@ -23,8 +24,9 @@ function DictionaryApp() {
 
       try {
         const response = await fetch(`${BASE_URL}${inputValue}`);
+        
         if (!response.ok) {
-          setError(err);
+          return alert("Ooops! Does that word exist? Refresh and try again.")
         }
         const data = await response.json();
         setResult(data[0]);
@@ -61,7 +63,7 @@ function DictionaryApp() {
           <input
             className="search-input"
             type="search"
-            autoFocus="on"
+            autoFocus={true}
             placeholder="Lookup a word .."
             onChange={handleChange}
           />

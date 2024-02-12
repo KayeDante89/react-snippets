@@ -1,3 +1,4 @@
+import React from 'react'
 import './App.css'
 import DictionaryApp from './pages/dictionary-app/DictionaryApp'
 

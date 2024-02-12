@@ -1,3 +1,4 @@
+import React from 'react';
 import './Definition.css';
 
 function Definition({definition}) {
