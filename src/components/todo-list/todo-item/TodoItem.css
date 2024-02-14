@@ -1,0 +1,21 @@
+.todo {
+  background: #fff;
+  padding: 10px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+button {
+  background-color: white;
+  border-style: none;
+  font-size: 12px;
+  margin: 1px;
+  padding: 8px;
+}

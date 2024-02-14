@@ -7,6 +7,7 @@ import DictionaryApp from './pages/dictionary-app/DictionaryApp'
 import PokemonSearchApp from './pages/pokemon-search-app/PokemonSearchApp';
 
 import './App.css'
+import TodoListPage from './pages/todo-list/TodoListPage';
 
 
 const Layout = () => {
@@ -25,7 +26,8 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/dictionary", element: <DictionaryApp/> },
-      { path: "/pokemon-search", element: <PokemonSearchApp/> }
+      { path: "/pokemon-search", element: <PokemonSearchApp/> },
+      { path: "/todo-list", element: <TodoListPage/> }
     ],
   },
 ]);
