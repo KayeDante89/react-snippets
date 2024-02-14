@@ -9,5 +9,3 @@ Dictionary API: [Free Dictionary API](https://dictionaryapi.dev/)
 
 * Practice using fetch and map methods.
 * Handling errors (UX)
-
-#test
