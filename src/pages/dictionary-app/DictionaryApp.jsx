@@ -65,7 +65,7 @@ function DictionaryApp() {
             value={inputValue}
             className="search-input"
             type="search"
-            autoFocus={true}
+            autoFocus={false}
             placeholder="Lookup a word .."
             onChange={handleChange}
           />

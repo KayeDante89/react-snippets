@@ -11,7 +11,7 @@ function NavBar() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <p>Projects</p>
+          <p style={{color: '#838189', borderBottom: '0.5px solid black', paddingBottom: '12px'}}>Projects</p>
           <ul>
             <li>
               <Link to="/dictionary">Dictionary</Link>

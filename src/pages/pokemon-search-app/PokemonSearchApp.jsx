@@ -49,11 +49,12 @@ function PokemonSearchApp() {
             value={inputValue}
             type="search"
             id="pokemon-name"
-            autoFocus={true}
+            autoFocus={false}
             placeholder="Enter pokemon name"
             onChange={handleChange}
           />
         </form>
+        {loading ? <p>Loading..</p> : <></>}
         {data ? (
           <div className="pokemon-card-style">
             <div id="pokemon-detail">
