@@ -8,14 +8,17 @@ function TodoListPage() {
     {
       text: "Learn React",
       isCompleted: false,
+      isImportant: false,
     },
     {
       text: "Build a really cool app",
       isCompleted: false,
+      isImportant: false,
     },
     {
       text: "Drink coffee",
       isCompleted: false,
+      isImportant: false,
     }
   ])
 
@@ -53,6 +56,12 @@ function TodoListPage() {
     setTodos(newTodos); // update State
   };
 
+  const markImportant = (index) => {
+    const newTodos = [...todos];
+    newTodos[index].isImportant = !newTodos[index].isImportant;
+    setTodos(newTodos);
+  }
+
   const removeTodo = (index) => {
     const newTodos = [...todos]; // create new array
     newTodos.splice(index, 1); // remove element from array and insert element in place
@@ -72,6 +81,7 @@ function TodoListPage() {
             moveDown={moveDown}
             completeTodo={completeTodo}
             removeTodo={removeTodo}
+            markImportant={markImportant}
           />
         ))}
         <ToDoForm addTodo={addTodo} />

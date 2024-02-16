@@ -10,12 +10,14 @@ function ToDoItem(props) {
     moveUp,
     moveDown,
     removeTodo,
+    markImportant
   } = props;
 
   return (
-    <div className={`todo ${todo.isCompleted ? "complete" : ""}`}>
+    <div className={`todo ${todo.isCompleted ? "complete" : ""} ${todo.isImportant ? "important" : ""}`}>
       {todo.text}
       <div>
+        <button onClick={() => markImportant(index)}>{todo.isImportant ? "Not Important" : "Important"}</button>
         <button onClick={() => moveUp(index)}>&uarr;</button>
         <button onClick={() => moveDown(index)}>&darr;</button>
         <button onClick={() => completeTodo(index)}>
