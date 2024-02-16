@@ -1,9 +1,9 @@
 .app {
-  background: #6b469a;
+  /* background: #6b469a; */
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 50px;
+  padding: 30px;
   height: 100vh;
 }
 
@@ -11,6 +11,5 @@
   background: #e8e8e8;
   border-radius: 30px;
   padding: 5px;
-  max-width: 600px;
   padding: 20px;
 }

@@ -1,8 +1,10 @@
 .todo {
   background: #fff;
-  padding: 10px;
-  font-size: 12px;
-  margin-bottom: 6px;
+  padding-block: 10px;
+  padding-inline: 20px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
