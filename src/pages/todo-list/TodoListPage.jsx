@@ -69,9 +69,9 @@ function TodoListPage() {
   };
 
   return (
-    <div className="page-margin app">
+    <div className="page-margin">
+      <h1>To Do List</h1>
       <div className="todo-list">
-        <h1>To Do List</h1>
         {todos.map((todo, index) => (
           <ToDoItem
             key={index}

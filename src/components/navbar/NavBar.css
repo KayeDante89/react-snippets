@@ -4,10 +4,9 @@
   width: 220px;
   margin: 0px;
   z-index: 1;
-  top: 0; 
+  top:0; 
   left: 0;
   overflow-x: hidden; 
-  padding-top: 30px;
 }
 
 #nav-links a {

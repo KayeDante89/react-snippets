@@ -1,13 +1,5 @@
-.app {
-  /* background: #6b469a; */
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  padding: 30px;
-  height: 100vh;
-}
-
 .todo-list {
+  max-width: 700px;
   background: #e8e8e8;
   border-radius: 30px;
   padding: 5px;
