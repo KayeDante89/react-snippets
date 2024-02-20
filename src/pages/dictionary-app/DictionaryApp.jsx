@@ -25,6 +25,7 @@ function DictionaryApp() {
         const response = await fetch(`${BASE_URL}${inputValue}`);
 
         if (!response.ok) {
+          setIsLoading(false)
           return alert("Ooops! Does that word exist? Refresh and try again.");
         }
 
